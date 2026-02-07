@@ -162,16 +162,19 @@ body {
   resize: vertical;
   min-height: 90px;
   font-family: inherit;
+main
 }
 
 .typing-input:focus {
   outline: 2px solid var(--primary);
   border-color: transparent;
+main
 }
 
 .feedback {
   margin: 0;
   color: var(--muted);
+main
 }
 
 @media (max-width: 720px) {
