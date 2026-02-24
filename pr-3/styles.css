@@ -1,0 +1,102 @@
+:root {
+  --primary: #005200;
+  --primary-dark: #003d00;
+  --bg: #f4f8f4;
+  --panel: #ffffff;
+  --text: #1f2b1f;
+  --border: #c9d8c9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+  background: linear-gradient(180deg, #eef5ee 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.timer-app {
+  width: min(92vw, 520px);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 16px 36px rgba(0, 82, 0, 0.16);
+}
+
+h1 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.timer-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 22px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #f7fbf7;
+  border: 1px solid var(--border);
+}
+
+.separator {
+  color: var(--primary);
+}
+
+.set-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.set-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.set-panel input {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button:active {
+  transform: translateY(1px);
+}

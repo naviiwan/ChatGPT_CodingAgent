@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoin Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="timer-app">
+      <h1>Shoin Timer</h1>
+
+      <section class="timer-display" aria-live="polite">
+        <span id="display-hours">00</span>
+        <span class="separator">:</span>
+        <span id="display-minutes">00</span>
+        <span class="separator">:</span>
+        <span id="display-seconds">00</span>
+      </section>
+
+      <section class="set-panel" aria-label="時刻設定">
+        <label>
+          時
+          <input id="set-hours" type="number" min="0" max="99" value="0" />
+        </label>
+        <label>
+          分
+          <input id="set-minutes" type="number" min="0" max="59" value="0" />
+        </label>
+        <label>
+          秒
+          <input id="set-seconds" type="number" min="0" max="59" value="0" />
+        </label>
+      </section>
+
+      <section class="button-row" aria-label="操作ボタン">
+        <button id="start-button">スタート</button>
+        <button id="stop-button">ストップ</button>
+        <button id="set-button">セット</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
