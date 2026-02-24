@@ -3,65 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>タイピングアプリ</title>
+    <title>Shoin Timer</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app">
-      <header class="app__header">
-        <div>
-          <p class="app__eyebrow">Typing Practice</p>
-          <h1>タイピングアプリ</h1>
-          <p class="app__subtitle">
-            ランダムな文章を入力してスピードと正確性を測定しましょう。
-          </p>
-        </div>
-        <div class="app__controls">
-          <button id="new-text" class="button button--ghost">文章を更新</button>
-          <button id="restart" class="button">最初から</button>
-        </div>
-      </header>
+    <main class="timer-app">
+      <h1>Shoin Timer</h1>
 
-      <section class="panel">
-        <div id="target" class="target-text" aria-live="polite"></div>
-        <div class="stats">
-          <div class="stat">
-            <span class="stat__label">タイム</span>
-            <span id="timer" class="stat__value">0.0s</span>
-          </div>
-          <div class="stat">
-            <span class="stat__label">WPM</span>
-            <span id="wpm" class="stat__value">0</span>
-          </div>
-          <div class="stat">
-            <span class="stat__label">正確性</span>
-            <span id="accuracy" class="stat__value">100%</span>
-          </div>
-          <div class="stat">
-            <span class="stat__label">進捗</span>
-            <span id="progress" class="stat__value">0/0</span>
-          </div>
-        </div>
+      <section class="timer-display" aria-live="polite">
+        <span id="display-hours">00</span>
+        <span class="separator">:</span>
+        <span id="display-minutes">00</span>
+        <span class="separator">:</span>
+        <span id="display-seconds">00</span>
       </section>
 
-      <section class="panel panel--input">
-        <label class="input-label" for="typing-input">ここに入力</label>
-        <textarea
-          id="typing-input"
-          class="typing-input"
-          rows="4"
-          placeholder="タイピングを開始すると計測が始まります"
-        ></textarea>
-        <p id="feedback" class="feedback">準備ができたら入力を開始してください。</p>
+      <section class="set-panel" aria-label="時刻設定">
+        <label>
+          時
+          <input id="set-hours" type="number" min="0" max="99" value="0" />
+        </label>
+        <label>
+          分
+          <input id="set-minutes" type="number" min="0" max="59" value="0" />
+        </label>
+        <label>
+          秒
+          <input id="set-seconds" type="number" min="0" max="59" value="0" />
+        </label>
       </section>
 
-      <section class="panel panel--tips">
-        <h2>ヒント</h2>
-        <ul>
-          <li>正確性を重視して入力しましょう。</li>
-          <li>最初の入力からタイマーがスタートします。</li>
-          <li>文章を更新して練習パターンを増やせます。</li>
-        </ul>
+      <section class="button-row" aria-label="操作ボタン">
+        <button id="start-button">スタート</button>
+        <button id="stop-button">ストップ</button>
+        <button id="set-button">セット</button>
       </section>
     </main>
 
